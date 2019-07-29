@@ -1,0 +1,77 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.datetime_select :dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agent %>
+    <%= form.text_field :agent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :package %>
+    <%= form.text_field :package %>
+  </div>
+
+  <div class="field">
+    <%= form.label :activities %>
+    <%= form.text_field :activities %>
+  </div>
+
+  <div class="field">
+    <%= form.label :travel %>
+    <%= form.text_field :travel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :itinery %>
+    <%= form.text_field :itinery %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
